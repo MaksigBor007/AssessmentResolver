@@ -129,7 +129,7 @@ public class AssessmentResolver extends CommonMethod {
 
 
     @Test
-    public static void Test5() throws InterruptedException {
+    public static void Test5(){
         /**
          * Navigate to the home page
          * In the test 5 div, wait for a button to be displayed (note: the delay is random) and then click it
@@ -153,7 +153,7 @@ public class AssessmentResolver extends CommonMethod {
     }
 
     @Test
-    public static void Test6() throws InterruptedException {
+    public static void Test6(){
         /**
          * Navigate to the home page
          * Write a method that allows you to find the value of any cell on the grid
