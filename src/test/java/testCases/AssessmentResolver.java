@@ -14,12 +14,13 @@ public class AssessmentResolver extends CommonMethod {
 
     @Test
     public static void Test1() {
-/**
- * Navigate to the home page
- * Assert that both the email address and password inputs are present as well as the login button
- * Enter in an email address and password combination into the respective fields
- */
-        //homepage is automatically opened through derived class which is CommonMethod class(avoiding redundant code)
+        /**
+        * Navigate to the home page
+        * Assert that both the email address and password inputs are present as well as the login button
+        * Enter in an email address and password combination into the respective fields
+        */
+
+        //@BeforeMethod automatically opens the homepage from CommonMethod every time we run a test(avoid code redundancy)
         boolean emailIsDisplayed = homePage.emailInput.isDisplayed();
         boolean passIsDisplayed = homePage.passwordInput.isDisplayed();
         boolean loginBtnIsDisplayed = homePage.loginBtn.isDisplayed();
@@ -42,15 +43,13 @@ public class AssessmentResolver extends CommonMethod {
 
     @Test
     public static void Test2() {
-/**
- * Navigate to the home page
- * In the test 2 div, assert that there are three values in the listgroup
- * Assert that the second list item's value is set to "List Item 2"
- * Assert that the second list item's badge value is 6
- */
-        //homepage is automatically opened through derived class which is CommonMethod class(avoiding redundant code)
-
-
+        /**
+        * Navigate to the home page
+        * In the test 2 div, assert that there are three values in the listgroup
+        * Assert that the second list item's value is set to "List Item 2"
+        * Assert that the second list item's badge value is 6
+        */
+        //@BeforeMethod automatically opens the homepage from CommonMethod every time we run a test(avoid code redundancy)
         int size = homePage.ListGroup.size();
         Assert.assertEquals(size, 3);
         System.out.println("There are " + size + " values in the listgroup");
@@ -80,8 +79,7 @@ public class AssessmentResolver extends CommonMethod {
          * Select "Option 3" from the select list
          */
 
-        //homepage is automatically opened through derived class which is CommonMethod class(avoiding redundant code)
-
+        //@BeforeMethod automatically opens the homepage from CommonMethod every time we run a test(avoid code redundancy)
         getJSExecutor().executeScript("window.scrollBy(0,700)");
         try {
             Thread.sleep(1000);
@@ -116,7 +114,9 @@ public class AssessmentResolver extends CommonMethod {
          * Navigate to the home page
          * In the test 4 div, assert that the first button is enabled and that the second button is disabled
          */
-        //homepage is automatically opened through derived class which is CommonMethod class(avoiding redundant code)
+
+
+        //@BeforeMethod automatically opens the homepage from CommonMethod every time we run a test(avoid code redundancy)
         getJSExecutor().executeScript("window.scrollBy(0,700)");
 
         boolean firstButtonIsEnabled = homePage.firstButton.isEnabled();
@@ -136,7 +136,9 @@ public class AssessmentResolver extends CommonMethod {
          * Once you've clicked the button, assert that a success message is displayed
          * Assert that the button is now disabled
          */
-        //homepage is automatically opened through derived class which is CommonMethod class(avoiding redundant code)
+
+
+        //@BeforeMethod automatically opens the homepage from CommonMethod every time we run a test(avoid code redundancy)
         getJSExecutor().executeScript("window.scrollBy(0,900)");
         waitToBeVisible(homePage.test5Button);
         click(homePage.test5Button);
@@ -158,7 +160,9 @@ public class AssessmentResolver extends CommonMethod {
          * Use the method to find the value of the cell at coordinates 2, 2 (staring at 0 in the top left corner)
          * Assert that the value of the cell is "Ventosanzap"
          */
-        //homepage is automatically opened through derived class which is CommonMethod class(avoiding redundant code)
+
+
+        //@BeforeMethod automatically opens the homepage from CommonMethod every time we run a test(avoid code redundancy)
         getJSExecutor().executeScript("window.scrollBy(0,1300)");
 
         List<WebElement> tableRows = homePage.table;

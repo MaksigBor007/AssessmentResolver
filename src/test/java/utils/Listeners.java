@@ -5,7 +5,8 @@ import org.testng.ITestResult;
 
 public class Listeners implements ITestListener {
 
-    public void onTestSuccess(ITestResult result) {
+   public void onTestSuccess(ITestResult result) {
         CommonMethod.takeScreenshot("passed" + result.getName());
     }
+
 }

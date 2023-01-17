@@ -98,7 +98,6 @@ public static WebDriver driver;
 
     public static void takeScreenshot(String fileName){
         TakesScreenshot ts = (TakesScreenshot) driver;
-//       byte[] picBytes =  ts.getScreenshotAs(OutputType.BYTES);
         File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 
 
